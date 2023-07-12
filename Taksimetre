@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class TaksimetreHesaplayıcı {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Uzaklık   Kullanıcı Tarafından Girilir
+        int uzaklık = scanner.nextInt();
+
+        // Taksimetre Ücretini Hesaplar
+        float kmbaşınafiyat = 2.2f;
+        float minimumücret = 20f;
+        float açılışücreti = 10f;
+        float taksimetreücreti = uzaklık * kmbaşınafiyat;
+        if (taksimetreücreti < minimumücret) {
+            taksimetreücreti = minimumücret;
+        }
+        taksimetreücreti += açılışücreti;
+
+        // Taksimetre Ücretini Yazdırır
+        System.out.println("Taksimetre Ücreti: " + taksimetreücreti);
+    }
+}
